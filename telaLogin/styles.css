@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgb(8,6,41);
-    background: radial-gradient(circle, rgba(8,6,41,1) 25%, rgba(23,23,102,1) 74%, rgba(7,28,56,1) 87%);
+    background: radial-gradient(circle, rgb(16, 12, 87) 25%, rgba(23,23,102,1) 74%, rgba(7,28,56,1) 87%);
     min-height: 100vh;
 }
 
@@ -146,6 +146,13 @@ a, i {
     color: black;
 }
 
+.lembre-link a:hover {
+    color: rgb(65, 36, 207);
+}
+.icones a:hover {
+    background: rgba(38, 26, 81, 0.815);
+}
+
 .alterne::before {
     content: '';
     position: absolute;
@@ -154,7 +161,7 @@ a, i {
     left: -250%;
     border-radius: 130px;
     height: 100%;
-    background: rgb(65, 130, 208);
+    background: rgb(32, 32, 82);
     transition: 1.8s ease-in-out;
 }
 
@@ -187,6 +194,10 @@ a, i {
     background: transparent;
     box-shadow: none;
     border: 2px solid rgb(255, 255, 255);
+}
+
+.botao:hover {
+    background: rgb(24, 14, 89);
 }
 
 .painel.painel-login {
@@ -226,3 +237,81 @@ a, i {
     padding-top: 2px;
 }
 
+@media screen and (max-width: 650px) {
+
+    .caixa {
+        height: calc(100vh - 40px);
+    }
+
+    .form-login {
+        bottom: 0;
+        height: 70%;
+        width: 100%;
+    }
+
+    .alterne:before {
+        left: 0;
+        border-radius: 20vw;
+        width: 100%;
+        top: -270%;
+        height: 300%;
+    }
+
+    .painel {
+        width: 100%;
+        height: 30%;
+    }
+
+    .painel.painel-registro {
+        top: 0;
+    }
+
+    .painel.painel-login {
+        bottom: 0;
+        right: -80%;
+    }
+
+    .caixa.ativado .alterne::before {
+        top: 70%;
+        left: 0;
+    }
+
+    .caixa.ativado .painel.painel-registro {
+        left: 0;
+        top: -30%;
+    }
+
+    .caixa.ativado .painel.painel-login {
+        bottom: 0;
+    }
+
+    .caixa.ativado .form-login {
+        right: 0;
+        bottom: 30%;
+    }
+
+    #iconeSENHA {
+        padding-top: 3px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .form-login {
+        padding: 20px;
+    }
+
+    .painel h1 {
+        font-size: 35px;
+    }
+
+    .alterne::before {
+        border-radius: 38px;
+    }
+
+    #iconeSENHA {
+        padding-top: 3px;
+    }
+
+}
