@@ -1,3 +1,16 @@
+const caixa = document.querySelector('.caixa');
+const botaoRegistro = document.querySelector('.botao-registro');
+const botaoLogin = document.querySelector('.botao-login');
+
+botaoRegistro.addEventListener('click', () => {
+    caixa.classList.add('ativado');
+});
+
+botaoLogin.addEventListener('click', () => {
+    caixa.classList.remove('ativado');
+});
+
+
 var senha = document.getElementById("senhaID");
 
 var mensagem = document.getElementById("mensagemID"); 
