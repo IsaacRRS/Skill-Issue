@@ -74,3 +74,57 @@ a {
     height: 110px;
 }
 
+@media (max-width: 600px) {
+    .caixa {
+        width: 90%; 
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .cards {
+        flex-direction: column;  
+        gap: 20px; 
+        padding: 40px; 
+    }
+
+    .card {
+        height: 150px; 
+        width: 100%; 
+        padding: 50px;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    .card img {
+        width: 80px; 
+        height: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .caixa {
+        padding: 10px; 
+        text-align: center; 
+    }
+
+    .cards {
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        height: 120px; /* Reduz ainda mais a altura */
+        width: 100%; /* Os cards ocupam toda a largura */
+    }
+
+    .card img {
+        width: 60px; /* Reduz as imagens proporcionalmente */
+        height: 60px;
+    }
+
+    h2 {
+        font-size: 18px; /* Diminui o tamanho do título */
+    }
+}
