@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(8,6,41);
+    background: radial-gradient(circle, rgb(16, 12, 87) 25%, rgba(23,23,102,1) 74%, rgba(7,28,56,1) 87%);
+    min-height: 100vh;
+}
+
+.caixa {
+    position: relative;
+    text-align: center;
+    background: rgb(231, 231, 232);
+    height: 550px;
+    width: 860px;
+    margin: 20px;
+    border-radius:  0 34px 34px 0;
+    box-shadow: 0 0 30px rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 39px;
+}
+
+.cards{
+    margin-top: 50px;
+    gap: 90px;
+    display: flex;
+    background: rgb(32, 32, 82);
+    padding: 65px;
+    border-radius: 14px;
+}
+
