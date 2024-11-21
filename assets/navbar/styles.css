@@ -69,6 +69,15 @@ body {
     opacity: 0;
 }
 
+.navegar ul li.ativa a .icone {
+    transform: translateY(-41px);
+}
+
+.navegar ul li.ativa a .texto {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
 .indique {
     transition: 0.5s;
     position: absolute;
@@ -79,3 +88,19 @@ body {
     background: rgb(33, 33, 183);
     border: 5px solid black
 }
+
+.navegar ul li:nth-child(1).ativa ~ .indique {
+    transform: translateX(calc(70px * 0));
+}
+
+.navegar ul li:nth-child(2).ativa ~ .indique {
+    transform: translateX(calc(70px * 1));
+}
+.navegar ul li:nth-child(3).ativa ~ .indique {
+    transform: translateX(calc(70px * 2));
+}
+.navegar ul li:nth-child(4).ativa ~ .indique {
+    transform: translateX(calc(70px * 3));
+}
+
+
