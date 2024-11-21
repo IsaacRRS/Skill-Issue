@@ -26,11 +26,11 @@ body {
 }
 
 .form-login.registro {
-    visibiplity: hidden;
+    visibility: hidden;
 }
 
 .caixa.ativado .form-login.registro {
-    visibiplity: visible;
+    visibility: visible;
 }
 
 .form-login {
