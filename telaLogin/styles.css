@@ -9,8 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(8,6,41);
-    background: radial-gradient(circle, rgb(16, 12, 87) 25%, rgba(23,23,102,1) 74%, rgba(7,28,56,1) 87%);
+    background: rgb(30,23,55);
+    background: radial-gradient(circle, rgb(49, 47, 47) 36%, rgba(0, 0, 0, 0.942) 70%);
     min-height: 100vh;
 }
 
@@ -21,7 +21,7 @@ body {
     width: 870px;
     margin: 20px;
     border-radius:  12px;
-    box-shadow: 0 0 30px rgba(170, 166, 166, 0.311);
+    box-shadow: 0 0 30px rgb(1, 1, 1);
     overflow: hidden;
 }
 
@@ -126,8 +126,8 @@ input::placeholder {
     border-radius: 10px;
     font-size: 18px;
     font-weight: 580;
-    background: rgb(32, 32, 82);
-    box-shadow: 0 0 20px rgba(38, 79, 202, 0.721);
+    background: rgb(116, 21, 21);
+    box-shadow: 0 0 20px rgba(7, 5, 24, 0.721);
 }
 
 .botao:hover {
@@ -140,10 +140,8 @@ a, i {
 }
 
 .lembre-link a:hover {
-    color: rgb(65, 36, 207);
-}
-.icones a:hover {
-    background: rgba(38, 26, 81, 0.815);
+    color: rgb(152, 28, 9);
+    transition: 0.5s;
 }
 
 .alterne::before {
@@ -154,7 +152,7 @@ a, i {
     left: -250%;
     border-radius: 130px;
     height: 100%;
-    background: rgb(32, 32, 82);
+    background: rgb(118, 22, 22);
     transition: 1.8s ease-in-out;
 }
 
@@ -194,7 +192,7 @@ a, i {
 }
 
 .botao:hover {
-    background: rgb(24, 14, 89);
+    background: rgb(153, 28, 28);
 }
 
 .painel.painel-login {
