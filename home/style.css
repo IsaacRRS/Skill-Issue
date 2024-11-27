@@ -132,11 +132,11 @@ header .top_nav li a{
 .icons li{
     list-style: none;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .icons li a{
     display: inline-block;
-    margin-left: 45px;
+    margin-left: 25px;
     background: #222;
     width: 50px;
     height: 50px;
