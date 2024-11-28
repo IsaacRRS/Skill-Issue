@@ -12,20 +12,36 @@
     <section>
         <div class="circle"></div>
         <header>
-            <a href="#"><img src="../images/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
+            <a href="../home/index.html"><img src="../images/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
             <nav class="top_nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Séries</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
         </header>
-        <div class="boxImg">
-            <img src="../images/arcane.jpg" alt="arcane.icon" class="img1">
-            <img src="" alt="vikings.icon" class="img2">
-            <img src="" alt="peaky.icon" class="img3">
+        <div class="register-form">
+            <form action="?pg=register" method="post">
+                <h2>Registre seu filme/série :</h2><br>
+                <label for="name"></label>
+                    <input type="text" name="name" placeholder="Nome" required>
+                <label for="gender"></label>
+                    <input type="text" name="gender" placeholder="Gênero" required><br>
+                <label for="duration"></label><br>
+                    <input type="number" name="duration" placeholder="Duração" required>
+                <label for="number" name="year_relase"></label>
+                    <input type="number" name="year_relase" placeholder="Ano de Lançamento" required><br>
+                <label for="description" name="description"></label><br>
+                    <textarea name="description" placeholder="Descrição" cols="50"></textarea> <br><br>
+                <label for="options">O que voce gostaria de cadastrar ?</label><br>
+                <select id="options" name="option">
+                    <option value="films-select">Filmes</option>
+                    <option value="series-select">Séries</option>
+                </select><br><br><br>
+                <button><input type="submit" value="Salvar" id="salvar-button"></button>              
+            </form>
         </div>
     </section>
 </body>

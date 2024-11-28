@@ -84,15 +84,14 @@ header .top_nav li a{
     color: #fff;
     font-size: 3em;
     margin-bottom: 10px;
-    line-height: 2.5em;
+    line-height: 2.2em;
     font-weight: 700;
 }
 .content .text h2 span{
     font-size: 75px;
     color: #e51e2a;
     text-decoration: underline;
-    text-decoration-color: rgb(255, 255, 255);
-    
+    text-decoration-color: rgb(255, 255, 255);    
 }
 .content .text p{
     color: #ffffff;
@@ -100,7 +99,7 @@ header .top_nav li a{
     text-indent: 2em;
     padding: 15px; 
     text-indent: 0;
-    background-image: url('images/textura.jpg'); 
+    background-image: url('../images/textura.jpg'); 
     text-decoration: dashed;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border: 2px solid rgb(255, 255, 255); 
