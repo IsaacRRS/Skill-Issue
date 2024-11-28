@@ -174,11 +174,6 @@ header .top_nav li a{
     transform: rotate(15deg)
 }
 
-.img1:hover,.img2:hover,.img3:hover{
-    scale: 1.1;
-    filter: brightness(1.2);
-}
-
 .buttons-container {
     display: none;
   }
@@ -189,8 +184,8 @@ header .top_nav li a{
   
 .register-button {
     display: inline-block;
-    margin-top: 50px;
-    padding: 10px 25px;
+    margin-top: 100px;
+    padding: 10px ;
     background: #e51e2a;
     color: #fff;
     font-weight: 500;
@@ -203,4 +198,16 @@ header .top_nav li a{
 p{
     font-family: 'Poppins', sans-serif;
 }
- 
+
+#register-button-films, #register-button-series{
+    display: inline-block;
+    padding: 5px 20px ;
+    background: #c1aab9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px; 
+    visibility: hidden;
+    margin-top: 40px;
+    margin-right:10px;
+    text-shadow: 3px 3px 5px #000000;
+}
