@@ -26,7 +26,7 @@
                 <h2>Registre sua série :</h2><br><br>
                 <label for="name">Nome:</label>
                     <input type="text" name="name" placeholder="Nome" required>
-                <label for="duration">Duração:</label>
+                <label for="seasons">Temporadas:</label>
                     <input type="number" name="duration" placeholder="Duração" required><br>
                 <label for="gender">Gênero:</label>
                     <select id="opcoes" name="opcoes">
@@ -35,11 +35,35 @@
                         <option value="comedia">Comédia</option>
                         <option value="ficcao">Ficção Científica</option>
                     </select>
+                <label for="number" name="number">N°:</label>
+                    <input type="number" name="number" placeholder="Número de Episodios" required><br>
                 <label for="number" name="year_relase">Ano de Lançamento:</label>
                     <input type="number" name="year_relase" placeholder="Ano de Lançamento" required><br><br><br>
-                <label for="description" name="description">Descrição:</label><br><br>
-                <textarea name="description" placeholder="Coloque sua Descrição aqui " cols="90" rows="3"></textarea> <br><br><br><br><br><br>
-                <button><input type="submit" value="Salvar" id="salvar-button"></button>            
+                <label for="description" name="description">Descrição:</label>
+                     <textarea name="description" placeholder="Coloque sua Descrição aqui " cols="90" rows="3"></textarea> <br><br><br><br>
+                <label for="status">Status:</label><br>
+                <label for="watched">Assistido</label>
+                <input type="radio" name="status-option" value="watched">  
+                <label for="not-watched">Não Assistido</label>
+                <input type="radio" name="status-option" value="not-watched" checked>   <br><br> 
+                <div class="rating">
+                    <!-- Estrelas -->
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">&#9733;</label>
+              
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">&#9733;</label>
+              
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">&#9733;</label>
+              
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">&#9733;</label>
+              
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">&#9733;</label>
+                  </div>   
+                <button><input type="submit" value="Salvar" id="salvar-button"></button>        
             </form>
         </div>
     </section>

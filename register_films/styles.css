@@ -58,20 +58,20 @@ header .top_nav li a{
 }
 
 .film-form{
-    padding: 20px;
-    background: linear-gradient(
-        hsla(0, 91%, 45%, 0.8),
-        rgba(50, 29, 29, 0.8)
-    );
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    display: block;
-    width: 50%;
+        padding: 20px;
+        background: linear-gradient(
+            hsla(0, 91%, 45%, 0.8),
+            rgba(50, 29, 29, 0.8)
+        );
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        display: block;
+        margin-top: 200px;  
+    }
  
-}
 
 #salvar-button{
     background: #e51e2a;
@@ -91,3 +91,23 @@ header .top_nav li a{
     justify-items: center;
     text-align: center;
  }
+
+ .rating {
+    direction: rtl; /* Faz com que as estrelas apareçam de forma invertida (da direita para a esquerda) */
+    display: flex;
+  }
+  .rating input {
+    display: none; /* Esconde os botões de input */
+  }
+  .rating label {
+    font-size: 30px;
+    color: gray;
+    cursor: pointer;
+  }
+  .rating input:checked ~ label {
+    color: gold; /* Cor das estrelas quando selecionadas */
+  }
+  .rating input:hover ~ label,
+  .rating input:hover ~ label:hover {
+    color: orange; /* Cor das estrelas quando o usuário passa o mouse sobre elas */
+  }
