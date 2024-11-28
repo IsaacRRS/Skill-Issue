@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(30,23,55);
+    background: radial-gradient(circle, rgb(49, 47, 47) 36%, rgba(0, 0, 0, 0.942) 70%);
+    min-height: 100vh;
+}
+
+.caixa {
+    position: relative;
+    text-align: center;
+    background: rgba(36, 7, 105, 0.074);
+    height: 550px;
+    width: 860px;
+    margin: 20px;
+    border-radius: 34px;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 39px;
+    color: white;
+}
+
+.cards{
+    margin-top: 50px;
+    gap: 90px;
+    display: flex;
+    background: transparent;
+    padding: 65px;
+    border-radius: 14px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 220px;
+    width: 200px;
+    background-color: #ffffffc8;
+    border-radius: 13px;
+    box-shadow: 6px 6px 7px  rgb(0, 0, 0);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 11px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}   
+
+.card:hover{
+    transform: scale(1.16);
+    box-shadow: 6px 6px 6px #7c0f16b5, 6px 6px 6px  #781118b7;
+    transition: 0.7s;
+}
+
+.card img{
+    width: 110px;
+    height: 110px;
+}
+
+@media (max-width: 600px) {
+    .caixa {
+        width: 90%; 
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .cards {
+        flex-direction: column;  
+        gap: 20px; 
+        padding: 40px; 
+    }
+
+    .card {
+        height: 150px; 
+        width: 100%; 
+        padding: 50px;
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    .card img {
+        width: 80px; 
+        height: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .caixa {
+        padding: 10px; 
+        text-align: center; 
+    }
+
+    .cards {
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        height: 120px; /* Reduz ainda mais a altura */
+        width: 100%; /* Os cards ocupam toda a largura */
+    }
+
+    .card img {
+        width: 60px; /* Reduz as imagens proporcionalmente */
+        height: 60px;
+    }
+
+    h2 {
+        font-size: 18px; /* Diminui o tamanho do título */
+    }
+}
