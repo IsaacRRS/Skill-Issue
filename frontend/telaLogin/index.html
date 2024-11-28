@@ -11,7 +11,8 @@
 <body>
     <div class="caixa">
         <div class="form-login">
-            <form action="escolhaLogin/index.html">
+            <form action="../../backend/login.php" method="post">
+
                 <div class="bip">
                     <i class="bi bi-camera-reels"></i>
                     <p class="projetoName">Swap Movies</p>
@@ -19,11 +20,13 @@
                 <h1>Login</h1>
                 <div class="campo-input">
                     <i class="fa-regular fa-envelope"></i>
-                    <input type="email" placeholder="Email" required>                   
+
+                    <input type="email" name="email" placeholder="Email" required>                   
                 </div>
                 <div class="campo-input">
                     <i class="fa-solid fa-lock"></i>
-                    <input type="password" placeholder="Senha" required>
+                    <input type="password" name="password" placeholder="Senha" required>
+
                 </div>
                 <div class="lembre-link">
                     <a href="#">Esqueceu a senha?</a>
@@ -32,7 +35,9 @@
             </form>
         </div>
         <div class="form-login registro">
-            <form action="escolhaLogin/index.html">
+
+            <form action="../../backend/register.php" method="post">
+
                 <div class="bip">
                     <i class="bi bi-camera-reels"></i>
                     <p class="projetoName">Swap Movies</p>
@@ -40,15 +45,16 @@
                 <h1>Registro</h1>
                 <div class="campo-input">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" placeholder="Nome" required>                   
+                    <input type="text" name="name" placeholder="Nome" required>                   
                 </div>
                 <div class="campo-input">
                     <i class="fa-regular fa-envelope"></i>
-                    <input type="email" placeholder="Email" required>                   
+                    <input type="email" name="email" placeholder="Email" required>                   
                 </div>
                 <div class="campo-input">
                     <i id="iconeSENHA" class="fa-solid fa-lock"></i>
-                    <input type="password" id="senhaID" placeholder="Senha" required>
+                    <input type="password" name="password" id="senhaID" placeholder="Senha" required>
+
                     <p class="mensagem" id="mensagemID">A senha é <span id="spanID"></span></p>
                 </div>
                 <button type="submit" class="botao">Registrar</button>
