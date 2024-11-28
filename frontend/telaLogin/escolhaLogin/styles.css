@@ -9,20 +9,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(8,6,41);
-    background: radial-gradient(circle, rgb(16, 12, 87) 25%, rgba(23,23,102,1) 74%, rgba(7,28,56,1) 87%);
+    background: rgb(30,23,55);
+    background: radial-gradient(circle, rgb(49, 47, 47) 36%, rgba(0, 0, 0, 0.942) 70%);
     min-height: 100vh;
 }
 
 .caixa {
     position: relative;
     text-align: center;
-    background: rgb(231, 231, 232);
+    background: rgba(36, 7, 105, 0.074);
     height: 550px;
     width: 860px;
     margin: 20px;
-    border-radius:  0 34px 34px 0;
-    box-shadow: 0 0 30px rgba(0,0,0,.3);
+    border-radius: 34px;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,13 +32,14 @@ body {
 
 h2 {
     font-size: 39px;
+    color: white;
 }
 
 .cards{
     margin-top: 50px;
     gap: 90px;
     display: flex;
-    background: rgb(32, 32, 82);
+    background: transparent;
     padding: 65px;
     border-radius: 14px;
 }
@@ -51,9 +52,9 @@ h2 {
     gap: 20px;
     height: 220px;
     width: 200px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 6px 6px 7px  rgb(42, 42, 43);
+    background-color: #ffffffc8;
+    border-radius: 13px;
+    box-shadow: 6px 6px 7px  rgb(0, 0, 0);
     transition: transform 0.3s ease;
     cursor: pointer;
     border-radius: 11px;
@@ -62,11 +63,13 @@ h2 {
 a {
     text-decoration: none;
     color: black;
+    
 }   
 
 .card:hover{
-    transform: scale(1.09);
-    box-shadow: 6px 6px 6px rgba(24, 74, 125, 0.5), 6px 6px 6px  rgba(24, 74, 125, 0.5);
+    transform: scale(1.16);
+    box-shadow: 6px 6px 6px #7c0f16b5, 6px 6px 6px  #781118b7;
+    transition: 0.7s;
 }
 
 .card img{

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.caixa {
+    height: 120vh;
+    width: 100%;
+    background: #1f3154;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.botao {
+    background: white;
+    border: 0;
+    outline: none;
+    font-size: 24px;
+    font-weight: 480;
+    padding: 15px 58px;
+    border-radius: 26px;
+}
+
+.salto {
+    border-radius: 10px;
+    width: 460px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 24px;
+    transform: translate(-50%,-50%) scale(0.2); 
+    padding: 0 32px 32px;
+    color: #212020;
+    text-align: center;
+    visibility: hidden; 
+    transition: transform 0.3s, top 0.5s; 
+}
+
+.animacao {
+    visibility: visible; 
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.salto i { 
+    width: 200px;
+    font-size: 62px;
+    padding: 20px;
+    color: white;
+    border-radius: 50%;
+    background: rgb(26, 165, 82);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    position: relative;
+    bottom: 30px;
+}
+
+.salto button {
+    width: 100%;
+    margin-top: 48px;
+    border: 0;
+    outline: 0;
+    color: white;
+    background: #111111;
+    padding: 14px 0;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+}

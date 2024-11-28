@@ -9,8 +9,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(8,6,41);
-    background: radial-gradient(circle, rgb(16, 12, 87) 25%, rgba(23,23,102,1) 74%, rgba(7,28,56,1) 87%);
+    background: rgb(30,23,55);
+    background: radial-gradient(circle, rgb(49, 47, 47) 36%, rgba(0, 0, 0, 0.942) 70%);
     min-height: 100vh;
 }
 
@@ -18,10 +18,10 @@ body {
     position: relative;
     background: white;
     height: 550px;
-    width: 860px;
+    width: 870px;
     margin: 20px;
-    border-radius:  0 34px 34px 0;
-    box-shadow: 0 0 30px rgba(0,0,0,.3);
+    border-radius:  12px;
+    box-shadow: 0 0 30px rgb(1, 1, 1);
     overflow: hidden;
 }
 
@@ -45,12 +45,15 @@ body {
     align-items: center;
     text-align: center;
     color: rgba(0, 0, 0, 0.886);
-    transition: .6s ease-in-out 1.2s, visibility 0s 1s;
+    transition: .6s ease-in-out 1.2s, visibiplity 0s 1s;
 }
 
 .form-login h1 {
-    position: relative;
-    top: 5px;
+    padding-top: 30px;
+}
+
+.bip  {
+    font-size: 40px;
 }
 
 .caixa.ativado .form-login {
@@ -123,23 +126,13 @@ input::placeholder {
     border-radius: 10px;
     font-size: 18px;
     font-weight: 580;
-    background: rgb(32, 32, 82);
-    box-shadow: 0 0 20px rgba(38, 79, 202, 0.721);
+    background: rgb(116, 21, 21);
+    box-shadow: 0 0 20px rgba(7, 5, 24, 0.721);
 }
 
-.icones {
-    display: flex;
-    justify-content: center;
-}
-
-.icones a {
-    padding: 10px;
-    margin: 0 8px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    font-size: 26px;
-    text-decoration: none;
-    display: inline-flex;
+.botao:hover {
+    scale: 1.1;
+    transition: 0.8s;
 }
 
 a, i {
@@ -147,10 +140,8 @@ a, i {
 }
 
 .lembre-link a:hover {
-    color: rgb(65, 36, 207);
-}
-.icones a:hover {
-    background: rgba(38, 26, 81, 0.815);
+    color: rgb(152, 28, 9);
+    transition: 0.5s;
 }
 
 .alterne::before {
@@ -161,8 +152,12 @@ a, i {
     left: -250%;
     border-radius: 130px;
     height: 100%;
-    background: rgb(32, 32, 82);
+    background: rgb(118, 22, 22);
     transition: 1.8s ease-in-out;
+}
+
+.alterne h1 {
+    font-size: 34px;
 }
 
 .alterne {
@@ -197,7 +192,7 @@ a, i {
 }
 
 .botao:hover {
-    background: rgb(24, 14, 89);
+    background: rgb(153, 28, 28);
 }
 
 .painel.painel-login {
@@ -241,6 +236,19 @@ a, i {
 
     .caixa {
         height: calc(100vh - 40px);
+    }
+
+    .bip {
+        padding-bottom: 40px;
+        text-decoration: underline;
+    }
+
+    .bip p {
+        font-size: 38px;
+    }
+
+    .bip i {
+        font-size: 50px;
     }
 
     .form-login {
@@ -300,6 +308,11 @@ a, i {
 
     .form-login {
         padding: 20px;
+    }
+
+    .bip {
+        position: relative;
+        top: 18px;
     }
 
     .painel h1 {
