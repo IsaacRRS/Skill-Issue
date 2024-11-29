@@ -202,14 +202,14 @@ p{
 #register-button-films, #register-button-series{
     display: inline-block;
     padding: 5px 20px ;
-    background: #c1aab9;
+    background: #767074;
     color: #fff;
     text-decoration: none;
     border-radius: 40px; 
     visibility: hidden;
     margin-top: 40px;
     margin-right:10px;
-    text-shadow: 3px 3px 5px #000000;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 #register-button-films:hover, #register-button-series:hover{
@@ -228,17 +228,17 @@ p{
     left: 0;
     margin: 50px;
     margin-left: 100px;
-  }
+}
   
-  .icon {
+.icon {
     background-color: #fff;
     padding: 10px 10px 5px 10px;
-  }
+}
   
-  .icon svg {
+.icon svg {
     width: 25px;
     height: 25px;
-  }
+}
   
   .cube {
     transition: all 0.4s;
@@ -279,4 +279,5 @@ p{
     color: #fff;
     transform: translate3d(0, 0, 1em);
   }
+ 
   

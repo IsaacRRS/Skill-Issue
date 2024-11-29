@@ -17,7 +17,7 @@ section{
     align-items: center;
     background: #000000;
     overflow-y: auto;
-    height: 900px;
+    height: 890px;
 }
 header{
     position: absolute;
@@ -119,26 +119,26 @@ color: #fff;
     color: #fff;
 }
 
- .rating {
+.rating {
     direction: rtl; /* Faz com que as estrelas apareçam de forma invertida (da direita para a esquerda) */
     display: flex;
     justify-content: left;
     display: inline-block;
     margin-left: 10px;
   }
-  .rating input {
+.rating input {
     display: none; /* Esconde os botões de input */
   }
-  .rating label {
+.rating label {
     font-size: 30px;
     color: gray;
     cursor: pointer;
   }
-  .rating input:checked ~ label {
+.rating input:checked ~ label {
     color: gold; /* Cor das estrelas quando selecionadas */
   }
-  .rating input:hover ~ label,
-  .rating input:hover ~ label:hover {
+.rating input:hover ~ label,
+.rating input:hover ~ label:hover {
     color: orange; /* Cor das estrelas quando o usuário passa o mouse sobre elas */
   }
 

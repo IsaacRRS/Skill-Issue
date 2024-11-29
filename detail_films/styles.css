@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    overflow-y: auto;
+    height: 880px;
+}
+header{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px 20px  ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo {
+    position: relative;
+    width: 200px; 
+    height: 200px; 
+    filter: brightness(1.5);
+  }
+    
+header .top_nav ul{
+    position: relative;
+    display: flex;
+}
+header .top_nav  li{
+    list-style: none;
+}
+header .top_nav li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 19px;
+    margin-left: 100px;
+}
+
+.top_nav li a:hover{
+    color: #e51e2a;
+    transition: 0.3s ease-in-out;
+}
+
+.table-container {
+    margin: 20px auto;
+    max-width: 900px;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(255, 253, 253, 0.1);
+    border-radius: 20px;
+    top: 225%;
+    left: 50%; 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(
+        hsla(0, 81%, 40%, 0.8),
+        rgba(68, 56, 56, 0.8)
+    );
+    padding: 10px;
+}
+
+.datatable {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px ;
+}
+
+legend{
+    border: 1px solid rgb(164, 166, 168);
+    padding: 10px;
+    text-align: center;
+    background:rgb(18, 18, 18);     
+    color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: justify-content;
+  }
+
+.datatable thead tr {
+    background: linear-gradient(
+        hsla(0, 4%, 90%, 0.8),
+        rgba(136, 133, 133, 0.8)
+    );
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+.datatable th {
+    padding: 20px;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+ 
+
+.datatable td {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    color: aliceblue;
+}
+
+.button-edit, .button-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.button-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-delete {
+    background-color: #F44336;
+    color: white;
+}
+
+.button-edit:hover {
+    background-color: #45a049;
+}
+
+.button-delete:hover {
+    background-color: #d32f2f;
+}
+ 
