@@ -16,7 +16,8 @@ section{
     justify-content: space-between;
     align-items: center;
     background: #000000;
-    overflow: hidden;
+    overflow-y: auto;
+    height: 880px;
 }
 header{
     position: absolute;
@@ -27,7 +28,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 header .logo {
     position: relative;
@@ -58,21 +58,25 @@ header .top_nav li a{
 }
 
 .film-form{
-        background: linear-gradient(
-            hsla(0, 91%, 45%, 0.8),
-            rgba(50, 29, 29, 0.8)
-        );
-        border-radius: 30px;
-        position: absolute;
-        top: 50%;
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        width: 40%;
+    background: linear-gradient(
+        hsla(0, 91%, 45%, 0.8),
+        rgba(50, 29, 29, 0.8)
+    );
+    border-radius: 30px;
+    position:absolute;
+    top: 59%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 40%;
+    letter-spacing: 2px;
+    margin: 0;
+    overflow: hidden;
 }
 
 fieldset{
     border: 3px solid rgb(255, 255, 255);
+    padding: 20px;
   }
 legend{
   border: 1px solid rgb(164, 166, 168);
@@ -83,17 +87,23 @@ legend{
 }
  
 .InputBox{
-    position: relative;
+    position:relative;
 } 
-.InputUser{
-    background-color: none;
-    border: none;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    outline: none;
-    color: #e51e2a;
-}   
- 
 
+.InputUser{
+    background:none;
+    border:none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #ffffff;
+    outline:none;
+    font-size: 15px;
+    width: 100%;
+}   
+
+label{
+  color: #fff;
+}
+ 
 #salvar-button{
     background: #e51e2a;
     color: #fff;
@@ -103,6 +113,8 @@ legend{
     direction: rtl; /* Faz com que as estrelas apareçam de forma invertida (da direita para a esquerda) */
     display: flex;
     justify-content: left;
+    display: inline-block;
+    margin-left: 10px;
   }
   .rating input {
     display: none;  
@@ -119,3 +131,10 @@ legend{
   .rating input:hover ~ label:hover {
     color: orange; /* Cor das estrelas quando o usuário passa o mouse sobre elas */
   }
+
+  .buttons {
+    float: right;
+    margin-left: 20px;
+  }
+
+  

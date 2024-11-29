@@ -42,15 +42,15 @@
                                 <option value="ficcao">Ficção Científica</option>
                                 <option value="aventura">Aventura</option>
                             </select>
-                    </div><br>
+                    </div> <br>
                     <div class="Inputbox">
                         <label for="number" name="year_relase">Ano de Lançamento:</label>
-                            <input type="number" name="year_relase" placeholder="Ano de Lançamento" class="InputUser" required><br><br><br>
+                            <input type="number" name="year_relase" placeholder="Ano de Lançamento" class="InputUser" required> 
+                    </div> 
+                    <div class="Inputbox"><br>
+                        <label for="description" name="description">Descrição:</label> <br>
+                            <textarea name="description" placeholder="Coloque sua Descrição aqui " cols="60" rows="2" class="InputUser"></textarea>
                     </div><br>
-                    <div class="Inputbox">
-                        <label for="description" name="description">Descrição:</label> 
-                            <textarea name="description" placeholder="Coloque sua Descrição aqui " cols="60" rows="2"></textarea>
-                    </div><br><br><br>
                         <label for="rating" name="rating">Avaliação:</label>
                     <div class="rating">
                             <input type="radio" id="star5" name="rating" value="5">
@@ -63,8 +63,18 @@
                             <label for="star2">&#9733;</label>
                             <input type="radio" id="star1" name="rating" value="1">
                             <label for="star1">&#9733;</label>
-                    </div>
+                    </div> <br><br>
+                    <div class="status">
+                        <label for="status">Status:</label>
+                        <label for="watched">Assistido</label>
+                        <input type="radio" name="status-option" value="watched">
+                        <label for="not-watched">/ Não Assistido</label>
+                        <input type="radio" name="status-option" value="not-watched" checked>
+                    </div> <br><br>
+                     <div class="buttons"> 
+                        <button><input type="reset" value="Limpar" id="back-button"></button>
                         <button><input type="submit" value="Salvar" id="salvar-button"></button>
+                    </div>                      
                 </fieldset>
             </form>
         </div>
