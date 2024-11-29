@@ -58,19 +58,40 @@ header .top_nav li a{
 }
 
 .film-form{
-        padding: 20px;
         background: linear-gradient(
             hsla(0, 91%, 45%, 0.8),
             rgba(50, 29, 29, 0.8)
         );
         border-radius: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        display: block;
-        margin-top: 200px;  
-    }
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        width: 40%;
+}
+
+fieldset{
+    border: 3px solid rgb(255, 255, 255);
+  }
+legend{
+  border: 1px solid rgb(164, 166, 168);
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(100, 10, 10);
+  color: white;
+}
+ 
+.InputBox{
+    position: relative;
+} 
+.InputUser{
+    background-color: none;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    color: #e51e2a;
+}   
  
 
 #salvar-button{
@@ -78,26 +99,13 @@ header .top_nav li a{
     color: #fff;
 }
 
- label{
-    margin: 10px;
-    color: #fff;
- }
- h2{
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 10px;
-    line-height: 2.2em;
-    font-weight: 700;
-    justify-items: center;
-    text-align: center;
- }
-
  .rating {
     direction: rtl; /* Faz com que as estrelas apareçam de forma invertida (da direita para a esquerda) */
     display: flex;
+    justify-content: left;
   }
   .rating input {
-    display: none; /* Esconde os botões de input */
+    display: none;  
   }
   .rating label {
     font-size: 30px;
