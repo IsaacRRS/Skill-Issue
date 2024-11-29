@@ -5,13 +5,8 @@
     font-family: sans-serif;
 }
 
-body {
-    background-image: url(../assets/imagemFUNDOcrud.png);
-    background-repeat: no-repeat;
-}
-
 .title {
-    background-color: rgba(160, 12, 12, 0.273);
+    background-color: rgba(12, 12, 12, 0.823);
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -37,22 +32,22 @@ body {
     transition: 0.6s;
 }
 
-
 .main-conteudo {
-    margin: 6vh auto;
-    width: 80%;
-    padding: 20px;
     position: relative;
+    margin: 3vh auto;
+    width: 100%;
+    padding: 20px;
 }
 
 .conteudo {
-    padding: 100px;
-    background-color: rgba(15, 22, 82, 0.149);
-    box-shadow: 0 0 20px rgba(31, 31, 31, 0.618);
-    border: 1px solid rgb(0, 0, 0);
+    padding: 80px;
+    border: 2px solid rgba(0, 0, 0, 0.221);
     border-radius: 15px;
 }
 
+form {
+    border: transparent;
+}
 
 .conteudo-table {
     border-collapse: collapse;
@@ -61,13 +56,12 @@ body {
     width: 100%;
     overflow-x: auto; 
     color: white;
-    background-color: rgba(233, 227, 227, 0.847);
     border-radius: 10px;
 }
 
 
 .conteudo-table thead tr {
-    background-color: rgba(0, 0, 0, 0.933);
+    background-color: rgba(0, 0, 0, 0.807);
     color: white;
     text-align: center;
     font-weight: bold;
@@ -98,9 +92,15 @@ body {
     color: white;
 }
 
-button:hover {
-    scale: 1.1;
+a {
+    text-decoration: none;
 }
+
+a:hover {
+    background-color: rgba(134, 137, 134, 0.755);
+    font-size: 13px;
+    transition: 0.7s;
+} 
 
 .ver {
     background: rgb(12, 46, 125);
