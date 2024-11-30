@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <title>Swap Films</title>
     <script src="config.js" defer></script>
 </head>
@@ -21,10 +22,10 @@
                 </ul>
             </nav>
         </header>
-        <div class="film-form">
-            <form action="?pg=register" method="post">
+        <div class="film-update-form">
+            <form action="?pg=register" method="get">
                 <fieldset>
-                    <legend><b>Registre seu Filme</b></legend><br>
+                    <legend><b><i class="fa-solid fa-wrench"></i>   Editar Filme</b></legend><br>
                     <div class="Inputbox">
                         <label for="name">Nome:</label>
                             <input type="text" name="name" placeholder="Nome" class="InputUser" required>
