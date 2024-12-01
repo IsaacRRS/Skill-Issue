@@ -57,7 +57,7 @@ header .top_nav li a{
     transition: 0.3s ease-in-out;
 }
 
-.film-update-form{
+.films-update-form{
     background: linear-gradient(
         hsla(0, 0%, 57%, 0.8),
         rgba(33, 33, 33, 0.8)

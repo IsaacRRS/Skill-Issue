@@ -22,36 +22,40 @@
                 </ul>
             </nav>
         </header>
-        <div class="films-update-form">
+        <div class="series-update-form">
             <form action="?pg=register" method="get">
                 <fieldset>
-                    <legend><b><i class="fa-solid fa-wrench"></i>   Editar Filme</b></legend><br>
+                    <legend><b><i class="fa-solid fa-wrench"></i>   Editar Série</b></legend><br>
                     <div class="Inputbox">
                         <label for="name">Nome:</label>
                             <input type="text" name="name" placeholder="Nome" class="InputUser" required>
                     </div><br>
                     <div class="Inputbox">
-                        <label for="time">Duração:</label>
-                            <input type="number" name="time" placeholder="Duração" class="InputUser" required><br>
+                        <label for="seasons">Temporadas:</label>
+                            <input type="number" name="duration" placeholder="N° de Temporadas" class="InputUser" required><br>
                     </div><br>
-                    <div class="Inputbox"> 
+                    <div class="Inputbox">
+                        <label for="number" name="number">N° de Episódios:</label>
+                            <input type="number" name="number" placeholder="N° de Episódios" class="InputUser" required><br>
+                    </div><br>
+                    <div class="Inputbox">
                         <label for="gender">Gênero:</label>
-                            <select id="opcoes" name="opcoes" size="1">
+                            <select id="opcoes" name="opcoes">
                                 <option value="terror">Terror</option>
                                 <option value="ação">Ação</option>
                                 <option value="comedia">Comédia</option>
                                 <option value="ficcao">Ficção Científica</option>
                                 <option value="aventura">Aventura</option>
                             </select>
-                    </div> <br>
+                    </div><br>
                     <div class="Inputbox">
                         <label for="number" name="year_relase">Ano de Lançamento:</label>
-                            <input type="number" name="year_relase" placeholder="Ano de Lançamento" class="InputUser" required> 
-                    </div> 
-                    <div class="Inputbox"><br>
-                        <label for="description" name="description">Descrição:</label> <br>
-                            <textarea name="description" placeholder="Coloque sua Descrição aqui " cols="60" rows="2" class="InputUser"></textarea>
+                            <input type="number" name="year_relase" placeholder="Ano de Lançamento" class="InputUser" required><br>
                     </div><br>
+                    <div lass="Inputbox">
+                        <label for="description" name="description">Descrição:</label>
+                             <textarea name="description" placeholder="Coloque sua Descrição aqui " class="InputUser" cols="90" rows="3"></textarea> <br>  
+                    </div>
                         <label for="rating" name="rating">Avaliação:</label>
                     <div class="rating">
                             <input type="radio" id="star5" name="rating" value="5">
