@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 section{
     position: relative;
@@ -39,7 +40,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    margin-left: 10px;
 }
 header .logo {
     position: relative;
@@ -47,27 +48,7 @@ header .logo {
     height: 200px; 
     filter: brightness(1.5);
   }
-    
-header .top_nav ul{
-    position: relative;
-    display: flex;
-}
-header .top_nav  li{
-    list-style: none;
-}
-header .top_nav li a{
-    display: inline-block;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 19px;
-    margin-left: 100px;
-}
 
-.top_nav li a:hover{
-    color: #e51e2a;
-    transition: 0.3s ease-in-out;
-}
 .content{
     position: relative;
     width: 100%;
@@ -78,7 +59,7 @@ header .top_nav li a{
 .content .text{
     position: relative;
     max-width: 700px;
-    margin-right: 20px;
+    margin-left: 40px;
 }
 .content .text h2{
     color: #fff;
@@ -120,52 +101,20 @@ header .top_nav li a{
     transform: translateY(-10px);
     background-color: #6e070e;
 }
-.icons{
-    position: absolute;
-    bottom: 40px;
-    left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.icons li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 10px;
-}
-.icons li a{
-    display: inline-block;
-    margin-left: 25px;
-    background: #222;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition:  0.3s ease-in-out;
-}
-
-.icons li a:hover{
-    background: #e51e2a;
-    transform: translateY(-10px);
-}
-.icons li a img{
-    filter: invert(1);
-    transform: scale(0.5);
-}
 
 .boxImg{
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     right: 0;
-    bottom: -40px;
+   
 }
 .boxImg img{
     width: 200px;
     border-radius: 50px;
 }
 .boxImg .img1{
-    transform: rotate(-15deg)
+    transform: rotate(-15deg);
+    margin-left: 20px;
 }
 .boxImg .img2{
     transform: rotate(5deg)
@@ -183,17 +132,16 @@ header .top_nav li a{
   }
   
 .register-button {
-    display: inline-block;
-    margin-top: 100px;
-    padding: 10px;
+    display: flex;
+    padding: 100px;
     background: #e51e2a;
     color: #fff;
-    font-weight: 500;
+    font-weight: 500px;
     letter-spacing: 1px;
     text-decoration: none;
-    border-radius: 40px;  
+    border-radius: 50px;  
+    margin-top: 400px;
 }
-
 
 p{
     font-family: 'Poppins', sans-serif;
@@ -207,9 +155,9 @@ p{
     text-decoration: none;
     border-radius: 40px; 
     visibility: hidden;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 2px #000000;
 }
 
@@ -240,6 +188,7 @@ p{
     transform-style: preserve-3d;
     width: 200px;
     height: 20px;
+    
     
   }
   
@@ -374,7 +323,7 @@ header .top_nav li a{
     text-indent: 2em;
     padding: 15px; 
     text-indent: 0;
-    background-image: url('../assets/textura.jpg'); 
+    background-image: url('../images/textura.jpg'); 
     text-decoration: dashed;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     border: 2px solid rgb(255, 255, 255); 
@@ -451,9 +400,256 @@ header .top_nav li a{
     transform: rotate(15deg)
 }
 
-.img1:hover,.img2:hover,.img3:hover{
-    scale: 1.1;
-    filter: brightness(1.2);
+
+
+.buttons-container {
+    display: none;
+  }
+  
+.buttons-container.active {
+    display: inline-block;
+  }
+  
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #000000;
+    padding: 6px 14px;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open {
+    width: 200px;
+    
+}
+.sidebar .detalhesLogo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.sidebar .detalhesLogo .nomeLogo {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  
+  .top {
+    background: #4d4c4c;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .detalhesLogo,
+.sidebar.open .detalhesLogo .nomeLogo {
+    opacity: 1;
+}
+
+.sidebar .detalhesLogo #botao {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .detalhesLogo #botao {
+    text-align: center;
+}
+
+.sidebar i {
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+  }
+ 
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000000;
+    overflow: hidden;
+    top: 0;
+    left: 8px;
+    width: calc(100% -78px);
+    transition: all 0.5s ease;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        hsla(0, 100%, 33%, 0.8),
+        rgba(50, 29, 29, 0.8)
+    );
+    background-blend-mode: multiply;
+    clip-path: circle(50% at bottom right);
+}
+header{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px 20px  ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+header .logo {
+    position: relative;
+    width: 200px; 
+    height: 200px; 
+    filter: brightness(1.5);
+  }
+    
+header .top_nav ul{
+    position: relative;
+    display: flex;
+}
+header .top_nav  li{
+    list-style: none;
+}
+header .top_nav li a{
+    display: inline-block;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 19px;
+    margin-left: 100px;
+}
+
+.top_nav li a:hover{
+    color: #e51e2a;
+    transition: 0.3s ease-in-out;
+}
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .text{
+    position: relative;
+    max-width: 700px;
+    margin-right: 20px;
+}
+.content .text h2{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 2.5em;
+    font-weight: 700;
+}
+.content .text h2 span{
+    font-size: 75px;
+    color: #e51e2a;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
+    
+}
+.content .text p{
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    text-indent: 2em;
+    padding: 15px; 
+    text-indent: 0;
+    background-image: url('../assets/textura.jpg'); 
+    text-decoration: dashed;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(255, 255, 255); 
+}
+.content .text a{
+    display: inline-block;
+    padding: 12px;
+    background: #e51e2a;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.content .text a:hover{
+    transform: translateY(-10px);
+    background-color: #6e070e;
+}
+
+.icons{
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.icons li a{
+    display: inline-block;
+    margin-left: 25px;
+    background: #222;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition:  0.3s ease-in-out;
+}
+
+.icons li a:hover{
+    background: #e51e2a;
+    transform: translateY(-10px);
+}
+.icons li a img{
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+.boxImg{
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+}
+.boxImg img{
+    width: 200px;
+    border-radius: 50px;
+}
+.boxImg .img1{
+    transform: rotate(-15deg)
+}
+.boxImg .img2{
+    transform: rotate(5deg)
+}
+.boxImg .img3{
+    transform: rotate(15deg)
 }
 
 .buttons-container {
@@ -800,37 +996,7 @@ header .top_nav li a{
     transform: translateY(-10px);
     background-color: #6e070e;
 }
-.icons{
-    position: absolute;
-    bottom: 40px;
-    left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.icons li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 10px;
-}
-.icons li a{
-    display: inline-block;
-    margin-left: 25px;
-    background: #222;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition:  0.3s ease-in-out;
-}
-
-.icons li a:hover{
-    background: #e51e2a;
-    transform: translateY(-10px);
-}
 
 
 
-  
+
