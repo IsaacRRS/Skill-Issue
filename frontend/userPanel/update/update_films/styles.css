@@ -62,23 +62,25 @@ header .top_nav li a{
     hsla(0, 0%, 57%, 0.8),
     rgba(33, 33, 33, 0.8)
 );
-border-radius: 30px;
-position: absolute;
-top: 50%;
-left: 50%; 
-transform: translate(-50%, -50%);
-padding: 20px;
-height: 100%;
-width: 70%;
-letter-spacing: 2px;
-margin: 0;
-overflow: hidden;
-margin: 0px;
+  border-radius: 30px;
+  position: absolute;
+  top: 51%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 89%;
+  width: 70%;
+  letter-spacing: 2px;
+  margin: 0;
+  overflow: hidden;
+  margin: 0px;
 }
 
 fieldset{
     border: 3px solid rgb(255, 255, 255);
     padding: 20px;
+    position: relative;
+    top: 60px;
   }
 
 legend{
@@ -197,6 +199,6 @@ label{
   color: #fff;
   background-color: #f10808;
   transition: background-color 0.3s ease;
-  right: 750px;
+  right: 40px;
   position: relative;
 }
