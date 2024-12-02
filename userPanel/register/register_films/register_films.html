@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Swap Films</title>
+    <script src="config.js" defer></script>
+</head>
+<body>
+    <section>
+        <header>
+            <a href="../home/index.html"><img src="../images/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
+            <nav class="top_nav">
+                <ul>
+                    <li><a href="../home/index.html">Home</a></li>
+                    <li><a href="../detail_films/detail_films.html">Seus  Filmes</a></li>
+                    <li><a href="#">Suas  Séries</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="film-form">
+            <form action="?pg=register" method="post">
+                <fieldset>
+                    <legend><b>Registre seu Filme</b></legend><br>
+                    <div class="Inputbox">
+                        <label for="name">Nome:</label>
+                            <input type="text" name="name" placeholder="Nome" class="InputUser" required>
+                    </div><br>
+                    <div class="Inputbox">
+                        <label for="time">Duração:</label>
+                            <input type="number" name="time" placeholder="Duração" class="InputUser" required><br>
+                    </div><br>
+                    <div class="Inputbox"> 
+                        <label for="gender">Gênero:</label>
+                            <select id="opcoes" name="opcoes" size="1">
+                                <option value="terror">Terror</option>
+                                <option value="ação">Ação</option>
+                                <option value="comedia">Comédia</option>
+                                <option value="ficcao">Ficção Científica</option>
+                                <option value="aventura">Aventura</option>
+                            </select>
+                    </div> <br>
+                    <div class="Inputbox">
+                        <label for="number" name="year_relase">Ano de Lançamento:</label>
+                            <input type="number" name="year_relase" placeholder="Ano de Lançamento" class="InputUser" required> 
+                    </div> 
+                    <div class="Inputbox"><br>
+                        <label for="description" name="description">Descrição:</label> <br>
+                            <textarea name="description" placeholder="Coloque sua Descrição aqui " cols="60" rows="2" class="InputUser"></textarea>
+                    </div><br>
+                        <label for="rating" name="rating">Avaliação:</label>
+                    <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5">
+                            <label for="star5">&#9733;</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4">&#9733;</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3">&#9733;</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2">&#9733;</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1">&#9733;</label>
+                    </div> <br><br>
+                    <div class="status">
+                        <label for="status">Status:</label>
+                        <label for="watched">Não Assistido</label>
+                        <input type="radio" name="status-option" value="not-watched" checked>
+                        <label for="not-watched">/ Assistido</label>
+                        <input type="radio" name="status-option" value="watched">
+                    </div> <br><br>
+                     <div class="buttons"> 
+                        <button><input type="reset" value="Limpar" id="clear-button"></button>
+                        <button><input type="submit" value="Salvar" id="save-button"></button>
+                    </div>                      
+                </fieldset>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
