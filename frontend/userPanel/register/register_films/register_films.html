@@ -11,17 +11,17 @@
 <body>
     <section>
         <div class="film-form">
-            <form action="?pg=register" method="post">
+            <form action="../../../../backend/user/movies/addMovie.php" method="post">
                 <fieldset>
                     <legend><b>Registre seu Filme</b></legend><br>
                     <div class="Inputbox">
                         <label for="name">Nome:</label>
                             <input type="text" name="name" placeholder="Nome" class="InputUser" required>
                     </div><br>
-                    <div class="Inputbox">
+                    <!-- <div class="Inputbox">
                         <label for="time">Duração:</label>
                             <input type="number" name="time" placeholder="Duração" class="InputUser" required><br>
-                    </div><br>
+                    </div><br> -->
                     <div class="Inputbox"> 
                         <label for="gender">Gênero:</label>
                             <select id="opcoes" name="opcoes" size="1">
@@ -55,9 +55,11 @@
                     </div> <br><br>
                     <div class="status">
                         <label for="status">Status:</label>
+                        <br><br>                        
                         <label for="watched">Não Assistido</label>
                         <input type="radio" name="status-option" value="not-watched" checked>
-                        <label for="not-watched">/ Assistido</label>
+                        <br>
+                        <label for="not-watched">Assistido</label>
                         <input type="radio" name="status-option" value="watched">
                     </div> <br><br>
                      <div class="buttons"> 
