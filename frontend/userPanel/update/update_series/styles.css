@@ -58,21 +58,22 @@ header .top_nav li a{
 }
 
 .series-update-form{
-    background: linear-gradient(
-        hsla(0, 0%, 57%, 0.8),
-        rgba(33, 33, 33, 0.8)
-    );
-    border-radius: 30px;
-    position:absolute;
-    top: 80%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 50%;
-    letter-spacing: 2px;
-    margin: 0;
-    overflow: hidden;
-    margin: 0px ;
+  background: linear-gradient(
+      hsla(0, 0%, 57%, 0.8),
+      rgba(33, 33, 33, 0.8)
+  );
+  border-radius: 30px;
+  position: absolute;
+  top: 49%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 100%;
+  width: 70%;
+  letter-spacing: 2px;
+  margin: 0;
+  overflow: hidden;
+  margin: 0px;
 }
 
 fieldset{
@@ -112,7 +113,7 @@ label{
 }
 
  .rating {
-    direction: rtl; /* Faz com que as estrelas apareçam de forma invertida (da direita para a esquerda) */
+    direction: rtl; 
     display: flex;
     justify-content: left;
     display: inline-block;
@@ -127,11 +128,11 @@ label{
     cursor: pointer;
   }
   .rating input:checked ~ label {
-    color: gold; /* Cor das estrelas quando selecionadas */
+    color: gold; 
   }
   .rating input:hover ~ label,
   .rating input:hover ~ label:hover {
-    color: orange; /* Cor das estrelas quando o usuário passa o mouse sobre elas */
+    color: orange; 
   }
 
   .buttons {
@@ -184,6 +185,20 @@ label{
 #clear-button:active {
   background-color: #3e8e41;
   transform: translateY(2px);
+}
+
+.voltar {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight:lighter ;
+  color: #fff;
+  background-color: #f10808;
+  transition: background-color 0.3s ease;
+  right: 750px;
+  position: relative;
 }
 
   

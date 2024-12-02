@@ -17,44 +17,7 @@ section{
     align-items: center;
     background: #000000;
     overflow-y: auto;
-    height: 880px;
-}
-header{
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    padding: 20px 120px 20px  ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header .logo {
-    position: relative;
-    width: 200px; 
-    height: 200px; 
-    filter: brightness(1.5);
-  }
-    
-header .top_nav ul{
-    position: relative;
-    display: flex;
-}
-header .top_nav  li{
-    list-style: none;
-}
-header .top_nav li a{
-    display: inline-block;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 19px;
-    margin-left: 100px;
-}
-
-.top_nav li a:hover{
-    color: #e51e2a;
-    transition: 0.3s ease-in-out;
+    height: 680px;
 }
 
 .film-form{
@@ -62,16 +25,18 @@ header .top_nav li a{
         hsla(0, 91%, 45%, 0.8),
         rgba(50, 29, 29, 0.8)
     );
-    border-radius: 30px;
-    position: absolute;
-    top: 44%;
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 40%;
-    letter-spacing: 2px;
-    margin: 0;
-    overflow: hidden;
+  border-radius: 30px;
+  position: absolute;
+  top: 49%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  height: 100%;
+  width: 70%;
+  letter-spacing: 2px;
+  margin: 0;
+  overflow: hidden;
+  margin: 0px;
 }
 
 fieldset{
@@ -110,7 +75,7 @@ label{
 }
 
  .rating {
-    direction: rtl; /* Faz com que as estrelas apareçam de forma invertida (da direita para a esquerda) */
+    direction: rtl; 
     display: flex;
     justify-content: left;
     display: inline-block;
@@ -125,11 +90,11 @@ label{
     cursor: pointer;
   }
   .rating input:checked ~ label {
-    color: gold; /* Cor das estrelas quando selecionadas */
+    color: gold; 
   }
   .rating input:hover ~ label,
   .rating input:hover ~ label:hover {
-    color: orange; /* Cor das estrelas quando o usuário passa o mouse sobre elas */
+    color: orange; 
   }
 
   .buttons {
@@ -184,4 +149,16 @@ label{
   transform: translateY(2px);
 }
 
-  
+.voltar {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight:lighter ;
+  color: #fff;
+  background-color: #f10808;
+  transition: background-color 0.3s ease;
+  right: 750px;
+  position: relative;
+}
