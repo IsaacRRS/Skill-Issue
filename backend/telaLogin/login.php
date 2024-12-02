@@ -1,5 +1,5 @@
 <?php
-require 'db.php';
+require '../db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = mysqli_fetch_assoc($result);
 
         if ($user['is_admin'] == 1) {
-            header('Location: ../frontend/telaLogin/escolhaLogin/index.html');
+            header('Location: ../../frontend/telaLogin/escolhaLogin/index.html');
             exit;
         } else {
-            header('Location: ../frontend/home/index.html');
+            header('Location: ../../frontend/home/index.html');
             exit;
         }
     } else {
