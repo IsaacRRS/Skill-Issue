@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -13,11 +14,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $hashedPassword = md5($password);
 
     // Consulta o usuário no banco de dados
-    $query = "SELECT * FROM users WHERE email = '$email' AND password = '$hashedPassword'";
-    $result = mysqli_query($conn, $query);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ? AND password = ?");
+    $stmt->bind_param("ss", $email, $hashedPassword);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if (mysqli_num_rows($result) > 0) {
-        $user = mysqli_fetch_assoc($result);
+    if ($result->num_rows > 0) {
+        $user = $result->fetch_assoc();
+
+        // Store user ID in session
+        $_SESSION['user_id'] = $user['id'];
 
         if ($user['is_admin'] == 1) {
             header('Location: ../../frontend/telaLogin/escolhaLogin/index.html');
@@ -29,5 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         echo "E-mail ou senha incorretos.";
     }
+
+    $stmt->close();
 }
 ?>
