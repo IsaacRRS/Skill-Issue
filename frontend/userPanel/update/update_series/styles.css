@@ -8,16 +8,15 @@
 }
 
 section{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000000;
-    overflow-y: auto;
-    height: 700px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  overflow-y: auto;
 }
 
 .series-update-form{
@@ -25,30 +24,23 @@ section{
       hsla(0, 0%, 57%, 0.8),
       rgba(33, 33, 33, 0.8)
   );
-  border-radius: 30px;
-  position: absolute;
-  top: 51%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  height: 86%;
-  width: 70%;
-  letter-spacing: 2px;
-  margin: 0;
-  overflow: hidden;
-  margin: 0px;
+    border-radius: 30px;
+    padding: 30px;
+    height: 100%;
+    width: 70%;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
 fieldset{
     border: 3px solid rgb(255, 255, 255);
-    padding: 20px;
-    position: relative;
-    top: 10px;
+    padding: 0px 20px 10px 20px;
+    
   }
 
 legend{
   border: 1px solid rgb(0, 0, 0);
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   background-color: rgb(129, 129, 129);
   color: rgb(0, 0, 0);
@@ -88,7 +80,7 @@ label{
     display: none;  
   }
   .rating label {
-    font-size: 30px;
+    font-size: 24px;
     color: gray;
     cursor: pointer;
   }

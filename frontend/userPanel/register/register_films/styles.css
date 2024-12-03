@@ -7,17 +7,22 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 section{
     position: relative;
     width: 100%;
     min-height: 100vh;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: #000000;
     overflow-y: auto;
-    height: 680px;
 }
 
 .film-form{
@@ -25,25 +30,20 @@ section{
         hsla(0, 91%, 45%, 0.8),
         rgba(50, 29, 29, 0.8)
     );
+    
   border-radius: 30px;
-  position: absolute;
-  top: 51%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  height: 86%;
+  padding: 30px;
+  height: 100%;
   width: 70%;
   letter-spacing: 2px;
   margin: 0;
-  overflow: hidden;
-  margin: 0px;
+
 }
 
 fieldset{
     border: 3px solid rgb(255, 255, 255);
     padding: 20px;
-    position: relative;
-    top: 60px;
+  
   }
 legend{
   border: 1px solid rgb(164, 166, 168);

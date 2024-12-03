@@ -8,54 +8,17 @@
 }
 
 section{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000000;
-    overflow-y: auto;
-    height: 700px;
-}
-header{
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    padding: 20px 120px 20px  ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header .logo {
-    position: relative;
-    width: 200px; 
-    height: 200px; 
-    filter: brightness(1.5);
-  }
-    
-header .top_nav ul{
-    position: relative;
-    display: flex;
-}
-header .top_nav  li{
-    list-style: none;
-}
-header .top_nav li a{
-    display: inline-block;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 19px;
-    margin-left: 100px;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  overflow-y: auto;
 }
 
-.top_nav li a:hover{
-    color: #e51e2a;
-    transition: 0.3s ease-in-out;
-}
 
 .films-update-form{
   background: linear-gradient(
@@ -63,24 +26,16 @@ header .top_nav li a{
     rgba(33, 33, 33, 0.8)
 );
   border-radius: 30px;
-  position: absolute;
-  top: 51%;
-  left: 50%; 
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  height: 89%;
+  padding: 30px;
+  height: 100%;
   width: 70%;
   letter-spacing: 2px;
   margin: 0;
-  overflow: hidden;
-  margin: 0px;
 }
 
 fieldset{
     border: 3px solid rgb(255, 255, 255);
     padding: 20px;
-    position: relative;
-    top: 60px;
   }
 
 legend{
