@@ -28,7 +28,7 @@
 }
 
 .title a:hover {
-    scale: 1.2;
+    scale: 1.6;
     transition: 0.6s;
 }
 
@@ -95,12 +95,6 @@ form {
 a {
     text-decoration: none;
 }
-
-a:hover {
-    background-color: rgba(134, 137, 134, 0.755);
-    font-size: 13px;
-    transition: 0.7s;
-} 
 
 .ver {
     background: rgb(12, 46, 125);

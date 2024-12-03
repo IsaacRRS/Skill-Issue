@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(31, 30, 30);
+}
+
+.logo {
+    position: relative;
+    width: 170px; 
+    height: 158px;
+    margin-left: 38px;
+}
+
+.title {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 145px;
+    line-height: 90px;
+    font-size: 35px;
+}
+
+.title a {
+    text-decoration: none;
+    color: white;
+}
+
+.voltar {
+    margin-right: 19px;
+    font-size: 54px;
+}
+
+.title .voltar:hover {
+    scale: 1.2;
+    transition: 0.6s;
+}
+
+.table-container {
+    margin: 20px auto;
+    max-width: 1400px;
+    box-shadow: 0px 0px 20px rgba(144, 9, 9, 0.562);
+    border-radius: 20px;
+   
+    background: linear-gradient(
+        hsla(0, 0%, 4%, 0.8),
+        rgba(48, 47, 47, 0.849)
+    );
+    padding: 10px;
+    width: 100%;
+}
+
+.datatable {
+    margin: 0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+legend{
+    padding: 10px;
+    text-align: center;    
+    color: rgb(255, 255, 255);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: justify-content;
+  }
+
+.datatable thead tr {
+    background: linear-gradient(
+        hsla(0, 4%, 90%, 0.8),
+        rgba(136, 133, 133, 0.8)
+    );
+    border-bottom: 2px solid #fffefe;
+    
+}
+
+.datatable th {
+    padding: 20px 0px 20px 0px;
+    font-weight: bold;
+    color:rgb(0, 0, 0);
+}
+ 
+
+.datatable td {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    color: aliceblue;
+}
+
+.button-edit, .button-delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.button-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button-delete {
+    background-color: #F44336;
+    color: white;
+    margin-left: 8px;
+}
+
+.button-edit:hover {
+    background-color: #2ca032;
+    scale: 1.1;
+    transition: 0.6s;
+}
+
+.button-delete:hover {
+    background-color: #d32f2f;
+    scale: 1.1;
+    transition: 0.6s;
+}
+ 
