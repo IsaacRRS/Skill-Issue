@@ -136,3 +136,6 @@ legend{
     transition: 0.6s;
 }
  
+a {
+    text-decoration: none;
+}
