@@ -11,7 +11,7 @@
 <body>
     <section>
         <div class="serie-form">
-            <form action="?pg=register" method="post">
+            <form action="../../../../backend/user/series/addSerie.php" method="post">
                 <fieldset>
                    <legend><b>Registre sua série :</b></legend>
                     <div class="Inputbox">
@@ -20,15 +20,16 @@
                     </div><br>
                     <div class="Inputbox">
                         <label for="seasons">Temporadas:</label>
-                            <input type="number" name="duration" placeholder="N° de Temporadas" class="InputUser" required><br>
+                            <input type="number" name="seasons" placeholder="N° de Temporadas" class="InputUser" required><br>
                     </div><br>
                     <div class="Inputbox">
                         <label for="number" name="number">N° de Episódios:</label>
-                            <input type="number" name="number" placeholder="N° de Episódios" class="InputUser" required><br>
+                            <input type="number" name="episodes" placeholder="N° de Episódios" class="InputUser" required><br>
                     </div><br>
                     <div class="Inputbox">
                         <label for="gender">Gênero:</label>
-                            <select id="opcoes" name="opcoes">
+                            <select id="opcoes" name="genre" required>
+                                <option value="" disabled selected>Selecione um gênero</option>
                                 <option value="terror">Terror</option>
                                 <option value="ação">Ação</option>
                                 <option value="comedia">Comédia</option>
@@ -37,8 +38,8 @@
                             </select>
                     </div><br>
                     <div class="Inputbox">
-                        <label for="number" name="year_relase">Ano de Lançamento:</label>
-                            <input type="number" name="year_relase" placeholder="Ano de Lançamento" class="InputUser" required><br>
+                        <label for="number" name="release_year">Ano de Lançamento:</label>
+                            <input type="number" name="release_year" placeholder="Ano de Lançamento" class="InputUser" required><br>
                     </div><br>
                     <div lass="Inputbox">
                         <label for="description" name="description">Descrição:</label>
