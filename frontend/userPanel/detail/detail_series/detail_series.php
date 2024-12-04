@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 
-$stmt = $conn->prepare("SELECT * FROM movies WHERE user_id = ?");
+$stmt = $conn->prepare("SELECT * FROM series WHERE user_id = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -30,36 +30,42 @@ $result = $stmt->get_result();
             <a class="voltar" href="../../../home/index.html"><i class="bi bi-arrow-up-left-square"></i></a>
     </div>
             <div class="table-container">
-                <legend><b>Detalhes do Filme</b></legend>
+                <legend><b>Detalhes da Série</b></legend>
                 <table class="datatable">
                     <thead>
                         <tr>
                             <th>n°</th>
                             <th>Nome</th>
+                            <th>Temporadas</th>
+                            <th>N° Episódios</th>
                             <th>Gênero</th>
+                            <th>Ano Lançamento</th>
+                            <th>Assistido</th>
                             <th>Avaliação</th>
-                            <th>estado</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php
                     $counter = 1;
-                    while ($movie = $result->fetch_assoc()):
+                    while ($series = $result->fetch_assoc()):
                     ?>
-                    <tr>
-                        <td><?php echo $counter++; ?></td>
-                        <td><?php echo htmlspecialchars($movie['name']); ?></td>
-                        <td><?php echo htmlspecialchars($movie['genre']); ?></td>
-                        <td><?php echo htmlspecialchars($movie['rating']); ?></td>
-                        <td><?php echo htmlspecialchars($movie['status']); ?></td>
-                        <td>
-                            <a class="button-edit" href="../../update/update_films/update_films.php?id=<?php echo $movie['id']; ?>">Editar</a>
-                            <a class="button-delete" href="../../delete/delete_movie.php?id=<?php echo $movie['id']; ?>">Deletar</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td><?php echo $counter++; ?></td>
+                            <td><?php echo htmlspecialchars($series['name']); ?></td>
+                            <td><?php echo htmlspecialchars($series['seasons']); ?></td>
+                            <td><?php echo htmlspecialchars($series['episodes']); ?></td>
+                            <td><?php echo htmlspecialchars($series['genre']); ?></td>
+                            <td><?php echo htmlspecialchars($series['release_year']); ?></td>
+                            <td><?php echo htmlspecialchars($series['status_option']); ?></td>
+                            <td><?php echo htmlspecialchars($series['rating']); ?></td>
+                            <td>
+                                <a class="button-edit" href="../../update/update_series/update_series.html">Editar</a>
+                                <button class="button-delete">Deletar</button>
+                            </td>
+                        </tr>
                     <?php
-                    endwhile; 
+                    endwhile;
                     ?>
                     </tbody>
                 </table>
