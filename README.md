@@ -54,6 +54,7 @@ O sistema de gerenciamento de filmes e séries foi projetado para permitir que:
 
 ### 2. Endpoints de Listas de Filmes e Séries
 
+- **GET**: Recupera lista completa de séries ou filmes
 - **POST**: Adiciona um filme ou série à lista.
 - **PUT**: Edita os detalhes de um item da lista.
 - **DELETE**: Remove um item da lista.
@@ -61,7 +62,7 @@ O sistema de gerenciamento de filmes e séries foi projetado para permitir que:
 ### 3. Endpoints de Administração
 
 - **GET**: Lista todos os usuários cadastrados no sistema.
-- **PUT**: Permite ao administrador editar detalhes de um item de qualquer lista de usuário.
+- **PUT**: Permite ao administrador editar detalhes de usuário e suas listas.
 - **DELETE**: Permite ao administrador remover itens de qualquer lista de usuário.
 - **DELETE**: Permite ao administrador excluir a conta de um usuário.
 
@@ -114,12 +115,6 @@ O sistema de gerenciamento de filmes e séries foi projetado para permitir que:
 #### 3.3. Comentários
 
 - É possível adicionar comentários pessoais ou críticas a cada item da lista, de forma opcional.
-
-### 4. Interface do Usuário
-
-#### 4.1. Dashboard Principal
-
-- Exibe um resumo das listas do usuário, com destaque para os conteúdos adicionados recentemente.
 
 ---
 
