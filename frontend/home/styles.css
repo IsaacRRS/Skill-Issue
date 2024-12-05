@@ -7,155 +7,19 @@
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
-.content .text p{
-    color: #ffffff;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-    text-indent: 2em;
-    padding: 15px; 
-    text-indent: 0;
-    background-image: url('../assets/textura.jpg'); 
-    text-decoration: dashed;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgb(255, 255, 255); 
-}
 
-.content .text a:hover{
-    transform: translateY(-10px);
-    background-color: #6e070e;
-}
-
-.boxImg .img1{
-    transform: rotate(-15deg);
-    margin-left: 20px;
-}
-.boxImg .img2{
-    transform: rotate(5deg);
-    margin-top: 20px;
-}
-.boxImg .img3{
-    transform: rotate(15deg)
-}
-
-.buttons-container {
-    display: none;
-  }
-  
-.buttons-container.active {
-    display: inline-block;
-  }
-  
-.register-button {
-    display: flex;
-    padding: 100px;
-    background: #e51e2a;
-    color: #fff;
-    font-weight: 500px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    border-radius: 50px;  
-    margin-top: 400px;
-}
-
-p{
-    font-family: 'Poppins', sans-serif;
-}
-
-#register-button-films, #register-button-series{
-    display: inline-block;
-    padding: 5px 20px ;
-    background: #767074;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 40px; 
-    visibility: hidden;
-    margin-top: 30px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 2px #000000;
-}
-
-#register-button-films:hover, #register-button-series:hover{
-    background-color: #6e070e;
-}
-
-.button-icon {
-    display: flex;
-    border: 3px #fff solid;
-    width: fit-content;
-    height: fit-content;
-    cursor: pointer;
-}
-  
-.icon {
-    background-color: #fff;
-    padding: 10px 10px 5px 10px;
-}
-  
-.icon svg {
-    width: 25px;
-    height: 25px;
-}
-  
-  .side {   
-    height: 47px;
-    width: 200px;
-    display: flex;
-    font-size: 0.8em;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: bold;
-  }
-
-  .front {
-    background: #222229;
-    color: #fff;
-    transform: translate3d(0, 0, 1em);
-  }
-
-.content{
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.content .text{
-    position: relative;
-    max-width: 700px;
-    margin-right: 20px;
-}
-.content .text h2{
-    color: #fff;
-    font-size: 3em;
-    margin-bottom: 10px;
-    line-height: 2.5em;
-    font-weight: 700;
-}
-
-
-.content .text a:hover{
-    transform: translateY(-10px);
-    background-color: #6e070e;
-}
-
-.boxImg{
+.circle{
     position: absolute;
-    right: 0;
-    bottom: -40px;
-}
-.boxImg img{
-    width: 200px;
-    border-radius: 50px;
-}
-
-.boxImg img:hover {
-    scale: 1.1;
-}
-
-p{
-    font-family: 'Poppins', sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        hsla(0, 100%, 33%, 0.8),
+        rgba(50, 29, 29, 0.8)
+    );
+    background-blend-mode: multiply;
+    clip-path: circle(50% at bottom right);
 }
 
 section{
@@ -173,12 +37,65 @@ section{
     width: calc(100% -78px);
     transition: all 0.5s ease;
 }
-.content .text a:hover{
-    transform: translateY(-10px);
-    background-color: #6e070e;
+
+header{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 120px 20px  ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
 }
-  
-.register-button {
+header .logo {
+    position: relative;
+    width: 200px; 
+    height: 200px; 
+    filter: brightness(1.5);
+  }
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.content .text{
+    position: relative;
+    max-width: 700px;
+    margin-left: 40px;
+}
+ 
+.content .text h2 span{
+    font-size: 75px;
+    color: #e51e2a;
+    text-decoration-color: rgb(255, 255, 255);    
+}
+
+.content .text h2{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 2.2em;
+    font-weight: 700;
+}
+
+.content .text p{
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    text-indent: 2em;
+    padding: 15px; 
+    text-indent: 0;
+    background-image: url('../images/textura.jpg'); 
+    text-decoration: dashed;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(255, 255, 255); 
+}
+.content .text a{
     display: inline-block;
     margin-top: 50px;
     padding: 10px 25px;
@@ -187,9 +104,148 @@ section{
     font-weight: 500;
     letter-spacing: 1px;
     text-decoration: none;
-    border-radius: 40px;  
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
 }
 
+.buttons-container {
+    display: none;
+  }
+  
+.buttons-container.active {
+    display: inline-block;
+  }
+  
+#register-button {
+    display: flex;
+    padding: 5px 20px ;
+    background: #e51e2a;
+    color: #fff;
+    font-weight: 4px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 20px;  
+    margin-top: 70px;
+    margin-left: 28px;
+    width: 130px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+#register-button:hover {
+    background-color: #6e070e;
+    scale: 1.1;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+#register-button-films, #register-button-series{
+    display: inline-block;
+    padding: 5px 20px ;
+    background: #767074;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px; 
+    visibility: hidden;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+#register-button-films:hover, #register-button-series:hover{
+    background-color: #6e070e;
+    transform: translateY(-10px);
+}
+
+.button-icon {
+    display: flex;
+    border: 3px #fff solid;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+  
+  .side {   
+    height: 47px;
+    width: 200px;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+
+.sidebar.open {
+    width: 200px;
+    
+}
+.sidebar .detalhesLogo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.sidebar .detalhesLogo .nomeLogo {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+
+.sidebar.open .detalhesLogo,
+.sidebar.open .detalhesLogo .nomeLogo {
+    opacity: 1;
+}
+
+.sidebar .detalhesLogo #botao {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.sidebar.open .detalhesLogo #botao {
+    text-align: center;
+}
+
+.sidebar i {
+    color: #fff;
+    transform: translate3d(0, 0, 1em);
+}
+
+.boxImg{
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+}
+.boxImg img{
+    width: 200px;
+    border-radius: 50px;
+}
+.boxImg .img1{
+    transform: rotate(-15deg)
+}
+.boxImg .img2{
+    transform: rotate(5deg)
+}
+.boxImg .img3{
+    transform: rotate(15deg)
+}
+
+.buttons-container {
+    display: none;
+}
+  
+.buttons-container.active {
+    display: inline-block;
+  }
 
 p{
     font-family: 'Poppins', sans-serif;
@@ -245,10 +301,6 @@ p{
 
 .sidebar.open .detalhesLogo #botao {
     text-align: center;
-}
-
-.perfil p {
-    color: white;
 }
 
 .sidebar i {
@@ -377,7 +429,7 @@ p{
 
 .sidebar .perfil #log_out {
     position: absolute;
-    top: 36%;
+    top: 50%;
     right: 0;
     transform: translateY(-50%);
     background: #000000;
@@ -404,51 +456,26 @@ p{
     transition: 0.5s;
 }
 
-.circle{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        hsla(0, 100%, 33%, 0.8),
-        rgba(50, 29, 29, 0.8)
-    );
-    background-blend-mode: multiply;
-    clip-path: circle(50% at bottom right);
+ 
+.content .text h2{
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 2.2em;
+    font-weight: 700;
 }
-header{
-    position: absolute;
-    top: -60px;
-    left: 0;
-    width: 100%;
-    padding: 20px 120px 20px  ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+ 
+.content .text p{
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    text-indent: 2em;
+    padding: 15px; 
+    text-indent: 0;
+    background-image: url('../assets/textura.jpg'); 
+    text-decoration: dashed;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(255, 255, 255); 
 }
-header .logo {
-    position: relative;
-    width: 200px; 
-    height: 200px; 
-    filter: brightness(1.5);
-  }
-    
-header .top_nav ul{
-    position: relative;
-    display: flex;
-}
-header .top_nav  li{
-    list-style: none;
-}
-.content .text h2 span{
-    font-size: 75px;
-    color: #e51e2a;
-    text-decoration: underline;
-    text-decoration-color: rgb(255, 255, 255);    
-}
-
 .content .text a{
     display: inline-block;
     margin-top: 20px;
@@ -460,8 +487,4 @@ header .top_nav  li{
     text-decoration: none;
     border-radius: 40px;
     transition: 0.3s ease-in-out;
-}
-.content .text a:hover{
-    transform: translateY(-10px);
-    background-color: #6e070e;
 }
