@@ -6,131 +6,255 @@ Bem-vindo ao repositório do **Sistema de Gerenciamento de Filmes e Séries**! E
 
 ## 📅 Cronograma do Projeto
 
-| **Data**        | **Descrição**                           |
-|------------------|-----------------------------------------|
-| **12/11/2024**   | Definição da equipe e tema do projeto   |
-| **14/11/2024**   | Concepção das tasks                    |
-| **16/11/2024**   | Criação do design                      |
-| **20/11/2024**   | Arquitetura de experiência do usuário  |
-| **28/11/2024**   | Desenvolvimento                        |
+| Data        | Descrição                             |
+|-------------|---------------------------------------|
+| 12/11/2024  | Definição da equipe e tema do projeto |
+| 14/11/2024  | Concepção das tasks                   |
+| 16/11/2024  | Criação do design                     |
+| 20/11/2024  | Arquitetura de experiência do usuário |
+| 28/11/2024  | Desenvolvimento                       |
 
 ---
 
 ## 👥 Equipe de Desenvolvimento
 
-| **Nome**          | **Função**                 |
-|--------------------|----------------------------|
-| Fabio Hiranoyama   | Product Owner - Back-end   |
-| Isaac Ribeiro      | Front-end                  |
-| João Lucas         | Back-end                   |
-| Juan Gabriel       | Back-end                   |
-| Marcus Santos      | Front-end                  |
+| Nome             | Função                   |
+|------------------|--------------------------|
+| Fabio Hiranoyama | Product Owner - Back-end |
+| Isaac Ribeiro    | Front-end                |
+| João Lucas       | Back-end                 |
+| Juan Gabriel     | Back-end                 |
+| Marcus Santos    | Front-end                |
 
 ---
 
-## 🔗 Link do Repositório
+## 🔗 Link do Repositório GitHub
 
-[Acesse o repositório aqui!](https://github.com/IsaacRRS/Skill-Issue)
+Acesse o repositório [aqui](https://github.com/IsaacRRS/Skill-Issue).
 
 ---
 
 ## 📖 Visão Geral
 
-O **Sistema de Gerenciamento de Filmes e Séries** foi projetado para:
+O sistema de gerenciamento de filmes e séries foi projetado para permitir que:
 
-- Permitir que usuários gerenciem suas listas de filmes e séries favoritas.
-- Avaliar e comentar conteúdos.
-- Administradores tenham controle total das informações do sistema.
+- Usuários façam login e gerenciem suas listas de filmes e séries favoritas.
+- Usuários avaliem conteúdos com notas e comentários.
+- Administradores gerenciem todas as informações e atividades dos usuários.
 
 ---
 
-## 🌐 Endpoints do Sistema
+## 🌐 Descrição Geral do Sistema
 
-### 🔒 Endpoints de Autenticação
-- **`POST /api/register`**: Cadastra um novo usuário.
-- **`POST /api/login`**: Realiza login e retorna um token de autenticação.
-- **`POST /api/logout`**: Realiza logout do usuário.
+### 1. Endpoints de Autenticação
 
-### 📋 Endpoints de Listas
-- **`POST /api/lista/adicionar`**: Adiciona um filme ou série à lista.
-- **`PUT /api/lista/editar/{id}`**: Edita os detalhes de um item da lista.
-- **`DELETE /api/lista/remover/{id}`**: Remove um item da lista.
+- **POST**: Cadastra um novo usuário.
+- **POST**: Realiza o login 
+- **POST**: Realiza o logout do usuário.
 
-### ⭐ Endpoints de Avaliação
-- **`POST /api/lista/{id}/avaliar`**: Adiciona uma nota a um filme ou série.
-- **`PUT /api/lista/{id}/avaliar`**: Atualiza a nota de um filme ou série.
-- **`GET /api/lista/avaliados`**: Lista todos os itens avaliados.
+### 2. Endpoints de Listas de Filmes e Séries
 
-### 🛠️ Endpoints de Administração
-- **`GET /api/admin/usuarios`**: Lista todos os usuários cadastrados.
-- **`PUT /api/admin/lista/editar/{id}`**: Edita detalhes de um item de qualquer lista.
-- **`DELETE /api/admin/lista/remover/{id}`**: Remove itens de qualquer lista.
-- **`DELETE /api/admin/usuario/remover/{id}`**: Exclui contas de usuários.
+- **POST**: Adiciona um filme ou série à lista.
+- **PUT**: Edita os detalhes de um item da lista.
+- **DELETE**: Remove um item da lista.
+
+### 3. Endpoints de Administração
+
+- **GET**: Lista todos os usuários cadastrados no sistema.
+- **PUT**: Permite ao administrador editar detalhes de um item de qualquer lista de usuário.
+- **DELETE**: Permite ao administrador remover itens de qualquer lista de usuário.
+- **DELETE**: Permite ao administrador excluir a conta de um usuário.
 
 ---
 
 ## ✅ Requisitos Funcionais
 
-### 🔑 Autenticação
-- Cadastro com e-mail válido e senha.
-- Login para acessar as funcionalidades.
-- Administradores podem:
-  - Editar listas de usuários.
-  - Remover itens de listas.
+### 1. Autenticação de Usuário
+
+#### 1.1. Cadastro
+
+- O usuário deve criar uma conta utilizando um endereço de e-mail válido e uma senha para acessar o sistema.
+
+#### 1.2. Login
+
+- O login é realizado mediante a inserção de e-mail e senha.
+- Após o login, o usuário tem acesso às suas listas e funcionalidades.
+
+#### 1.3. Fluxo de Administrador
+
+- Administradores possuem acesso a todas as informações e atividades dos usuários, podendo:
+  - Editar as listas de filmes e séries dos usuários.
+  - Remover filmes e séries das listas de qualquer usuário.
   - Excluir contas de usuários.
 
-### 📋 Listas de Filmes e Séries
-- Adicionar, editar e remover itens com detalhes como título, ano e status (assistido ou não).
+### 2. Listas de Filmes e Séries
 
-### ⭐ Avaliação e Notas
-- Avaliar itens com notas de 1 a 5 estrelas.
-- Atualizar notas a qualquer momento.
-- Adicionar comentários opcionais.
+#### 2.1. Adicionar Filme ou Série
 
-### 🖥️ Interface do Usuário
-- **Dashboard**: Resumo das listas do usuário.
-- **Pesquisa**: Busca por títulos ou gêneros.
-- **Categorias**: 'Favoritos', 'Para Assistir' e 'Assistidos'.
+- O usuário pode adicionar filmes e séries à sua lista, incluindo informações detalhadas como título, ano, descrição e status (assistido ou não).
+
+#### 2.2. Editar Detalhes
+
+- As informações de um item na lista podem ser modificadas, como título, descrição, ano e status.
+
+#### 2.3. Remover Filme ou Série
+
+- O usuário pode excluir filmes e séries de sua lista a qualquer momento.
+
+### 3. Avaliação e Notas
+
+#### 3.1. Dar Nota
+
+- O usuário pode avaliar filmes e séries com uma escala predefinida de 1 a 5 estrelas.
+
+#### 3.2. Atualizar Nota
+
+- A nota pode ser alterada pelo usuário a qualquer momento.
+
+#### 3.3. Comentários
+
+- É possível adicionar comentários pessoais ou críticas a cada item da lista, de forma opcional.
+
+### 4. Interface do Usuário
+
+#### 4.1. Dashboard Principal
+
+- Exibe um resumo das listas do usuário, com destaque para os conteúdos adicionados recentemente.
 
 ---
 
 ## 📋 Requisitos Não Funcionais
 
-1. O usuário deve estar logado para gerenciar listas e avaliações.
-2. Um item só pode ser adicionado à lista uma vez.
-3. As notas de avaliação devem estar entre 1 e 5.
-4. Apenas administradores podem acessar endpoints administrativos.
+1. **Autenticação Obrigatória**: O usuário deve estar logado para utilizar as funcionalidades de gerenciamento de listas e avaliações.
+
+2. **Validação de Notas**: As notas de avaliação devem ser obrigatoriamente entre 1 e 5, podendo ser atualizadas posteriormente pelo usuário.
+
+3. **Segurança**: Apenas administradores têm acesso aos endpoints administrativos, permitindo total controle sobre os dados do sistema.
 
 ---
 
-## 🗂️ Estrutura do Banco de Dados
+## 🗂️ Diagramação e Prototipação de Banco de Dados
 
-### 🧑‍💻 Tabela de Usuários
-| **Atributo** | **Tipo**   | **Tamanho** | **Máscara** | **Obrigatório** |
-|--------------|------------|-------------|-------------|------------------|
-| `ID`         | Inteiro    | 11          | PK          | ✅               |
-| `Nome`       | Texto      | 255         | -           | ✅               |
-| `Email`      | Texto      | 16          | -           | ✅               |
-| `Senha`      | Texto      | 15          | -           | ✅               |
+### 1. Tabela de Usuários
 
-### 🎥 Tabela de Filmes
-| **Atributo** | **Tipo**   | **Tamanho** | **Máscara** | **Obrigatório** |
-|--------------|------------|-------------|-------------|------------------|
-| `ID`         | Inteiro    | 11          | PK          | ✅               |
-| `Nome`       | Texto      | 255         | -           | ✅               |
-| `Duração`    | Float      | 16          | -           | ✅               |
-| `Estado`     | ENUM       | 10          | -           | ✅               |
+| Atributo  | Tipo    | Tam. | Máscara | Obrig. |
+|-----------|---------|------|---------|--------|
+| ID        | Inteiro | 11   | PK      | ✅      |
+| Nome      | Texto   | 255  | -       | ✅      |
+| Email     | Texto   | 255  | -       | ✅      |
+| Senha     | Texto   | 255  | -       | ✅      |
+| Is_admin  | Boolean | 1    | -       | ✅      |
 
-### 📺 Tabela de Séries
-| **Atributo**         | **Tipo**   | **Tamanho** | **Máscara** | **Obrigatório** |
-|-----------------------|------------|-------------|-------------|------------------|
-| `ID`                 | Inteiro    | 11          | PK          | ✅               |
-| `Nome`               | Texto      | 255         | -           | ✅               |
-| `Duração`            | Float      | 16          | -           | ✅               |
-| `Estado`             | ENUM       | 10          | -           | ✅               |
-| `Episodios`          | Inteiro    | 10          | -           | ✅               |
-| `Episodios_assistidos` | Inteiro    | 10          | -           | ✅               |
+### 2. Tabela de Filmes
+
+| Atributo      | Tipo    | Tam. | Máscara | Obrig. |
+|---------------|---------|------|---------|--------|
+| ID            | Inteiro | 11   | PK      | ✅      |
+| Nome          | Texto   | 255  | -       | ✅      |
+| User_id       | Inteiro | 11   | FK      | ✅      |
+| Status_Option | String  | 50   | -       | ✅      |
+| Genre         | String  | 100  | -       | ✅      |
+| Rating        | Int     | 1    | -       | ✅      |
+| Release_year  | Int     | 4    | -       | ✅      |
+| Description   | Texto   | -    | -       | ✅      |
+
+### 3. Tabela de Séries
+
+| Atributo      | Tipo    | Tam. | Máscara | Obrig. |
+|---------------|---------|------|---------|--------|
+| ID            | Inteiro | 11   | PK      | ✅      |
+| Nome          | Texto   | 255  | -       | ✅      |
+| User_id       | Inteiro | 11   | FK      | ✅      |
+| Status_Option | String  | 50   | -       | ✅      |
+| Genre         | String  | 100  | -       | ✅      |
+| Rating        | Int     | 1    | -       | ✅      |
+| Release_year  | Int     | 4    | -       | ✅      |
+| Description   | Texto   | -    | -       | ✅      |
+| Seasons       | Int     | 2    | -       | ✅      |
+| Episodes      | Int     | 2    | -       | ✅      |
 
 ---
 
-🚀 **Pronto para mergulhar no código? Contribua ou explore o projeto!**
+## 🛠️ Script SQL para Criação do Banco de Dados
+
+```sql
+-- Create the database
+CREATE DATABASE skill_issue;
+
+-- Use the database
+USE skill_issue;
+
+-- Create the 'users' table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE
+);
+
+-- Create the 'series' table
+CREATE TABLE series (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    seasons INT NOT NULL,
+    episodes INT NOT NULL,
+    release_year INT NOT NULL,
+    description TEXT,
+    rating INT CHECK (rating >= 1 AND rating <= 5),
+    status_option VARCHAR(50),
+    genre VARCHAR(100),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Create the 'movies' table
+CREATE TABLE movies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    genre VARCHAR(100),
+    rating INT CHECK (rating >= 1 AND rating <= 5),
+    status_option VARCHAR(50),
+    release_year INT NOT NULL,
+    description TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+```
+
+---
+
+## 📝 Como Executar o Projeto
+
+1. **Clone o repositório:**
+
+   ```bash
+   git clone https://github.com/IsaacRRS/Skill-Issue.git
+   ```
+
+2. **Configure o banco de dados:**
+
+   - Utilize o script SQL acima para criar o banco de dados `skill_issue`.
+   - Configure a conexão no arquivo `db.php`.
+
+3. **Instale as dependências necessárias.**
+
+4. **Execute o servidor localmente.**
+
+---
+
+## 📚 Tecnologias Utilizadas
+
+- **Front-end:** HTML, CSS, JavaScript
+- **Back-end:** PHP
+- **Banco de Dados:** MySQL
+
+---
+
+## 📌 Observações
+
+- **Segurança:** As senhas são armazenadas utilizando hash para garantir a segurança dos usuários.
+- **Validação de Dados:** O sistema realiza validações nos formulários para garantir a integridade dos dados inseridos.
+
+---
+
