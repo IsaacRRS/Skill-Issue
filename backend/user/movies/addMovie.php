@@ -15,8 +15,10 @@
         $genre = trim($_POST['opcoes']);
         $rating = intval($_POST['rating']);
         $status = trim($_POST['status-option']);
+        $release_year = intval($_POST['release_year']);
+        $description = trim($_POST['description']);
 
-        if (empty($name) || empty($genre) || empty($rating) || empty($status)) {
+        if (empty($name) || empty($genre) || empty($rating) || empty($status) || empty($release_year) || empty($description)) {
             echo "Preencha todos os campos.";
             exit;
         }
@@ -26,8 +28,8 @@
             exit;
         }
 
-        $stmt = $conn->prepare("INSERT INTO movies (user_id, name, genre, rating, status) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("issis", $user_id, $name, $genre, $rating, $status);
+        $stmt = $conn->prepare("INSERT INTO movies (user_id, name, genre, rating, status_option, release_year, description) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("issisis", $user_id, $name, $genre, $rating, $status, $release_year, $description);
 
         if ($stmt->execute()) {
             echo "Filme adicionado com sucesso!";

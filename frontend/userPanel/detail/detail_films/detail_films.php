@@ -26,7 +26,7 @@ $result = $stmt->get_result();
 </head>
 <body>
     <div class="title">
-            <a href="#"><img src="../../../assets/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
+            <a href="../../../home/index.html"><img src="../../../assets/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
             <a class="voltar" href="../../../home/index.html"><i class="bi bi-arrow-up-left-square"></i></a>
     </div>
             <div class="table-container">
@@ -37,6 +37,7 @@ $result = $stmt->get_result();
                             <th>n°</th>
                             <th>Nome</th>
                             <th>Gênero</th>
+                            <th>Ano</th>
                             <th>Avaliação</th>
                             <th>estado</th>
                             <th>Ações</th>
@@ -49,13 +50,14 @@ $result = $stmt->get_result();
                     ?>
                     <tr>
                         <td><?php echo $counter++; ?></td>
-                        <td><?php echo htmlspecialchars($movie['name']); ?></td>
-                        <td><?php echo htmlspecialchars($movie['genre']); ?></td>
-                        <td><?php echo htmlspecialchars($movie['rating']); ?></td>
-                        <td><?php echo htmlspecialchars($movie['status']); ?></td>
+                        <td><?php echo ($movie['name']); ?></td>
+                        <td><?php echo ($movie['genre']); ?></td>
+                        <td><?php echo ($movie['release_year']); ?></td>
+                        <td><?php echo ($movie['rating']); ?></td>
+                        <td><?php echo ($movie['status_option']); ?></td>
                         <td>
                             <a class="button-edit" href="../../update/update_films/update_films.php?id=<?php echo $movie['id']; ?>">Editar</a>
-                            <a class="button-delete" href="../../delete/delete_movie.php?id=<?php echo $movie['id']; ?>">Deletar</a>
+                            <a class="button-delete" href="../../../../backend/user/movies/deleteMovie.php?id=<?php echo $movie['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir este filme?');">Deletar</a>
                         </td>
                     </tr>
                     <?php
