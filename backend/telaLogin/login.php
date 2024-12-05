@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     } else {
-        echo "E-mail ou senha incorretos.";
+        echo "<script>alert('Email ou senha incorretos'); window.location.href = '../../frontend/telaLogin/index.html';</script>";
     }
 
     $stmt->close();

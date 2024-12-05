@@ -35,7 +35,6 @@
             header("Location: ../../../frontend/messages/MovieAdded.html");
         } else {
             echo "<script>alert('Erro ao adicionar filme.'); window.location.href = '../../../frontend/userPanel/register/register_films/register_films.html';</script>";
-            
             echo ": " . $stmt->error;
         }
 
