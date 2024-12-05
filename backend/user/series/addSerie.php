@@ -21,12 +21,12 @@
         $rating = intval($_POST['rating']);
 
         if (empty($name) || empty($seasons) || empty($episodes) || empty($genre) || empty($release_year) || empty($status_option) || empty($rating) || empty($description)) {
-            echo "Preencha todos os campos.";
+            echo "<script>alert('Preencha todos os campos.'); window.location.href = '../../../frontend/userPanel/register/register_series/register_series.html';</script>";
             exit;
         }
 
         if ($rating < 0 || $rating > 5) {
-            echo "A nota deve ser um número entre 0 e 5.";
+            echo "<script>alert('A nota deve ser um número entre 0 e 5'); window.location.href = '../../../frontend/userPanel/register/register_series/register_series.html';</script>";
             exit;
         }
 
@@ -34,7 +34,7 @@
         $stmt->bind_param("ississsis", $user_id, $name, $seasons, $episodes, $genre, $release_year, $status_option, $rating, $description);
 
         if ($stmt->execute()) {
-            echo "Série adicionada com sucesso!";
+            header("Location: ../../../frontend/messages/SerieAdded.html");
         } else {
             echo "Erro ao adicionar série: " . $stmt->error;
         }
