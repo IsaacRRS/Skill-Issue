@@ -230,13 +230,13 @@ p{
     border-radius: 50px;
 }
 .boxImg .img1{
-    transform: rotate(-15deg)
+    transform: rotate(-15deg);
 }
 .boxImg .img2{
-    transform: rotate(5deg)
+    transform: rotate(5deg);
 }
 .boxImg .img3{
-    transform: rotate(15deg)
+    transform: rotate(15deg);
 }
 
 .buttons-container {
