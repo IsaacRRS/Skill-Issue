@@ -26,7 +26,7 @@ $result = $stmt->get_result();
 </head>
 <body>
     <div class="title">
-            <a href="#"><img src="../../../assets/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
+            <a href="../../../home/index.html"><img src="../../../assets/icone_swap.png" alt="logo_swapfilms" class="logo"></a>
             <a class="voltar" href="../../../home/index.html"><i class="bi bi-arrow-up-left-square"></i></a>
     </div>
             <div class="table-container">
@@ -52,21 +52,19 @@ $result = $stmt->get_result();
                     ?>
                         <tr>
                             <td><?php echo $counter++; ?></td>
-                            <td><?php echo htmlspecialchars($series['name']); ?></td>
-                            <td><?php echo htmlspecialchars($series['seasons']); ?></td>
-                            <td><?php echo htmlspecialchars($series['episodes']); ?></td>
-                            <td><?php echo htmlspecialchars($series['genre']); ?></td>
-                            <td><?php echo htmlspecialchars($series['release_year']); ?></td>
-                            <td><?php echo htmlspecialchars($series['status_option']); ?></td>
-                            <td><?php echo htmlspecialchars($series['rating']); ?></td>
+                            <td><?php echo ($series['name']); ?></td>
+                            <td><?php echo ($series['seasons']); ?></td>
+                            <td><?php echo ($series['episodes']); ?></td>
+                            <td><?php echo ($series['genre']); ?></td>
+                            <td><?php echo ($series['release_year']); ?></td>
+                            <td><?php echo ($series['status_option']); ?></td>
+                            <td><?php echo ($series['rating']); ?></td>
                             <td>
-                                <a class="button-edit" href="../../update/update_series/update_series.html">Editar</a>
-                                <button class="button-delete">Deletar</button>
+                            <a class="button-edit" href="../../update/update_series/update_series.php?id=<?php echo $series['id']; ?>">Editar</a>
+                                <a class="button-delete" href="../../../../backend/user/series/deleteSerie.php?id=<?php echo $series['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir esta série?');">Deletar</a>
                             </td>
                         </tr>
-                    <?php
-                    endwhile;
-                    ?>
+                    <?php endwhile; ?>
                     </tbody>
                 </table>
         </header>
