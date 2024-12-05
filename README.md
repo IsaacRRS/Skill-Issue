@@ -48,8 +48,9 @@ O sistema de gerenciamento de filmes e séries foi projetado para permitir que:
 
 ### 1. Endpoints de Autenticação
 
-- **POST**: Cadastra um novo usuário.
+- **ENDPOINT INICIAL**: http://localhost/Skill-issue/frontend/telaLogin/
 - **POST**: Realiza o login 
+- **POST**: Cadastra um novo usuário.
 - **POST**: Realiza o logout do usuário.
 
 ### 2. Endpoints de Listas de Filmes e Séries
