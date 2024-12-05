@@ -19,12 +19,12 @@
         $description = trim($_POST['description']);
 
         if (empty($name) || empty($genre) || empty($rating) || empty($status) || empty($release_year) || empty($description)) {
-            echo "Preencha todos os campos.";
+            echo "<script>alert('Preencha todos os campos.'); window.location.href = '../../../frontend/userPanel/register/register_films/register_films.html';</script>";
             exit;
         }
 
         if ($rating < 0 || $rating > 5) {
-            echo "A nota deve ser um número entre 0 e 5.";
+            echo "<script>alert('A nota deve ser um número entre 0 e 5.'); window.location.href = '../../../frontend/userPanel/register/register_films/register_films.html';</script>";
             exit;
         }
 
@@ -32,9 +32,11 @@
         $stmt->bind_param("issisis", $user_id, $name, $genre, $rating, $status, $release_year, $description);
 
         if ($stmt->execute()) {
-            echo "Filme adicionado com sucesso!";
+            header("Location: ../../../frontend/messages/MovieAdded.html");
         } else {
-            echo "Erro ao adicionar filme: " . $stmt->error;
+            echo "<script>alert('Erro ao adicionar filme.'); window.location.href = '../../../frontend/userPanel/register/register_films/register_films.html';</script>";
+            
+            echo ": " . $stmt->error;
         }
 
         $stmt->close();
